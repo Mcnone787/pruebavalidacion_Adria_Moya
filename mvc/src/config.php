@@ -2,9 +2,9 @@
 
 $config=[
     "db" => [
-        "user" => "root",
-        "pass" => "",
-        "db" => "apartamentos",
+        "user" => "root3",
+        "pass" => "daw-2020",
+        "db" => "prueba_validacion",
         "host" => "localhost"
     ],
 ];
