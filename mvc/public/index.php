@@ -14,6 +14,15 @@
 
 
 include "../src/config.php";
+include "../src/controllers/ctrlindex.php";
+include "../src/controllers/ctrllogin.php";
+include "../src/controllers/ctrlregister.php";
+include "../src/controllers/ctrlregistrar.php";
+include "../src/controllers/doregister.php";
+include "../src/controllers/ctrlverificacion_register.php";
+include "../src/controllers/ctrlconsulta.php";
+include "../src/controllers/contrasena_consultaAjax.php";
+
 
 
 
@@ -30,14 +39,32 @@ $r = $_REQUEST["r"];
 
 // /* Creem els diferents models */
 // $session = new Daw\Session();
-// $images = new Daw\Images()dd;
+// $images = new Daw\Images();
 
 // Front Controller
-// switch ($r) {
-  
-//     default:
-//         ctrlIndex($request, $response, $container);
-//         break;
-// }
+
+switch ($r) {
+  case "login":
+    ctrllogin($request, $response, $container);
+    break;
+    case "register":
+        ctrlregistrar($request, $response, $container);
+        break;
+    case "doregistro":
+        doregistro($request, $response, $container);
+        break;
+        case "verificacion_register":
+            ctrlverificacion_register($request, $response, $container);
+            break;
+        case "consulta":
+            ctrlconsulta($request, $response, $container);
+            break;
+        case "contrasena_consulta";
+        contrasena_consultaAjax($request, $response, $container,$key);
+        break;
+    default:
+        ctrlindex($request, $response, $container);
+        break;
+}
 
 $response->response();

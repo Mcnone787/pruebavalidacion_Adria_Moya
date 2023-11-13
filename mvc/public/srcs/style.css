@@ -100,3 +100,12 @@ body {
      left: 0 !important;
 }
 }
+.textoinicio{
+  display: flex;
+  flex-direction: row;
+  /* align-content: center; */
+  justify-content: center;
+}
+label{
+  width: 100%;
+}
